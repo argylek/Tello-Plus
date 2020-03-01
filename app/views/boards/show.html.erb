@@ -1,0 +1,16 @@
+<h1>Board</h1>
+
+<h3> <%= @board.name %></h3>
+<hr />
+
+<%= link_to 'Edit Board', edit_board_path(@board) %>
+<br />
+<%= link_to 'Delete board', @board, method: :delete %>
+<br></br>
+<%= link_to 'Add List', new_board_list_path(@board) %>
+<br>
+
+<br />
+
+  <%= render partial: '/lists/list'%>
+
